@@ -26,8 +26,9 @@ RSA key.
 - Copy the key provided and add it to Github,Gitfoss or elsewhere.
 - Enjoy
 
-~Note: Pressing submit without input will result in error.
-~Note: If you already have an RSA key it will ask for overwriting permission.
+Note: Pressing submit without input will result in error.
+
+Note: If you already have an RSA key it will ask for overwriting permission.
 
 License
 ----
