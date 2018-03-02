@@ -10,12 +10,13 @@ SSH_KEY_GEN = "ssh-keygen -t rsa -b 4096 -C "
 
 def create_key(email_id,password):
     global SSH_KEY_GEN
+    rsa_file_path = os.path.expanduser('~/.ssh/id_rsa')
     SSH_KEY_GEN = SSH_KEY_GEN +  email_id
     command = SSH_KEY_GEN.split(" ")
     command.append(" -N ")
     command.append(password)
     command.append(" -f ")
-    command.append("id_rsa")
+    command.append(rsa_file_path)
     # print(command)
     command_str = " ".join(command)
     os.system(command_str)
