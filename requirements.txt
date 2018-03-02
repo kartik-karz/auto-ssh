@@ -1,3 +1,4 @@
 # pip3 install -r requirements.txt
 
-git
+git >=1.0
+PyQt5
