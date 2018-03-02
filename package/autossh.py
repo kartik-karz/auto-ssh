@@ -1,7 +1,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import os
-import sshHandler
+import sshHandler as sshHandle
 class Ui_Form(object):
 
 
@@ -32,10 +32,10 @@ class Ui_Form(object):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
     def btn_submit_click(self):
-        email_id = self.et_email_id.text()
-        password = self.et_password.text()
-        create_key(email_id,password)
-
+        email_id = self.et_email_id.toPlainText()
+        password = self.et_password.toPlainText()
+        sshHandle.create_key(email_id,password)
+        ssHandle.add_to_agent()
         rsa = self.load_rsa_key()
         self.et_rsa_label.setText(rsa)
 

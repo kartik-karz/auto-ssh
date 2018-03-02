@@ -20,6 +20,8 @@ def create_key(email_id,password):
     command_str = " ".join(command)
     os.system(command_str)
     # sb.call(command)
-
+def add_to_agent():
+    os.system('"eval "$(ssh-agent -s)"')
+    os.system("ssh-add ~/.ssh/id_rsa")
 
 # create_key("test2@test.com","password")
