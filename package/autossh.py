@@ -6,7 +6,7 @@ class Ui_Form(object):
 
 
     def setupUi(self, Form):
-        Form.setObjectName("Form")
+        Form.setObjectName("Auto SSH")
         Form.resize(400 , 550)
         self.Form = Form
         self.et_email_id = QtWidgets.QTextEdit(Form)
