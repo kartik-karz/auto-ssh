@@ -25,4 +25,12 @@ def add_to_agent():
     os.system('"eval "$(ssh-agent -s)"')
     os.system("ssh-add ~/.ssh/id_rsa")
 
+def load_rsa_key():
+    rsa_file_path = os.path.expanduser('~/.ssh/id_rsa.pub')
+    f = open(rsa_file_path, "r")
+
+    rsa_key = f.read()
+    f.close()
+    return rsa_key
+
 # create_key("test2@test.com","password")
